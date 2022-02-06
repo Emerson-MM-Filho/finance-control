@@ -6,7 +6,7 @@ from .views import *
 
 
 router = routers.DefaultRouter()
-router.register(r'categoria', GetAllCategorias)
+router.register(r'categoria', CategoriasView)
 
 urlpatterns = [
     path('', include(router.urls))
