@@ -1,4 +1,4 @@
-from despesa.models import Despesa
+from .models import Despesa
 from rest_framework import serializers
 
 
