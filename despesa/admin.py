@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Despesa
+
+
+class DespesaAdmin(admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Despesa, DespesaAdmin)
