@@ -1,4 +1,5 @@
-from pyexpat import model
+from datetime import datetime
+
 from django.db import models
 from categoria.models import Categoria
 
@@ -9,6 +10,8 @@ class Despesa(models.Model):
     descricao = models.CharField(max_length=255, blank=True, null=True)
     valor = models.DecimalField(blank=False, null=False, decimal_places=2, max_digits=8)
     categoria = models.ForeignKey(Categoria, blank=False, null=False, on_delete=models.DO_NOTHING)
+    data = models.DateField(default=datetime.now, blank=False, null=False)
+    parcelas = models.IntegerField(null=True, blank=True)
 
 
     def __str__(self):
